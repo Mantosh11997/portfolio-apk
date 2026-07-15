@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mantosh Singh | Software Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  
+  <!-- Google tag (gtag.js) - Google Analytics -->
+  <!-- TODO: Replace G-XXXXXXXXXX with your actual Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ12RZ4GXJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YJ12RZ4GXJ');
+  </script>
+</head>
+<body class="no-scroll">
+
+<!-- ===== PRELOADER ===== -->
+<div id="preloader" class="preloader">
+  <div class="terminal-loader">
+    <div class="term-line term-active"><span id="bootText"></span><span class="terminal-cursor" id="termCursor">_</span></div>
+    <div class="term-line" id="termLine1"></div>
+    <div class="term-line" id="termLine2"></div>
+    <div class="term-line" id="termLine3"></div>
+    <div class="term-line" id="termLine4"></div>
+    <div class="term-line" id="termLine5"></div>
+  </div>
+</div>
+
+<!-- ===== CUSTOM CURSOR ===== -->
+<div id="cursorDot" class="cursor-dot"></div>
+<div id="cursorTrail" class="cursor-trail"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="nav-brand">
+    <svg class="brand-logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="40" height="40" rx="12" fill="url(#logo-grad)" fill-opacity="0.1" stroke="url(#logo-grad)" stroke-width="1.5"/>
+      <polyline points="12,26 12,14 20,22 28,14 28,26" stroke="url(#logo-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <defs>
+        <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+          <stop stop-color="var(--accent)"/>
+          <stop offset="1" stop-color="var(--accent2)"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <span class="brand-text">Mantosh<span class="accent">.</span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span class="sun-icon">☀</span>
+    <span class="moon-icon">☾</span>
+  </button>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#skills" class="mobile-link">Skills</a>
+  <a href="#experience" class="mobile-link">Experience</a>
+  <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <canvas id="particleCanvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-top-badges">
+      <div class="hero-badge">
+        <span class="status-dot"></span>
+        Available for new opportunities
+      </div>
+      <div class="hero-badge time-badge" id="timeWidget"></div>
+    </div>
+    <h1 class="hero-name">
+      <span class="hello">Hello, I'm</span>
+      <span class="name-text">Mantosh Singh</span>
+    </h1>
+    <div class="hero-roles">
+      <span class="role-static">I build</span>
+      <span class="typed-wrapper">
+        <span id="typedText" class="typed-text"></span>
+        <span class="typed-cursor">|</span>
+      </span>
+    </div>
+    <p class="hero-desc">
+      Dynamic Software Developer with <strong>4+ years</strong> of experience crafting scalable enterprise apps,
+      AI/ML systems, and intelligent chatbots. Based in Mohali, Punjab, India.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Get In Touch</a>
+    </div>
+    <div class="hero-socials">
+      <a href="mailto:smantosh06@gmail.com" class="social-chip" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        smantosh06@gmail.com
+      </a>
+      <a href="tel:+917009073863" class="social-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+        +91 7009073863
+      </a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-profile-wrap">
+      <div class="hero-profile-ring"></div>
+      <div class="hero-profile-ring ring2"></div>
+      <img src="profile.jpg" alt="Mantosh Singh" class="hero-profile-img" onerror="this.parentElement.style.display='none'" />
+    </div>
+    <div class="code-block glass">
+      <div class="code-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="code-title">mantosh.py</span>
+      </div>
+      <pre class="code-body"><span class="kw">class</span> <span class="cls">MantoshSingh</span>:
+    role = <span class="str">"Software Developer"</span>
+    exp  = <span class="num">4</span>  <span class="cmt"># years</span>
+
+    skills = [
+        <span class="str">"Java"</span>, <span class="str">"Spring Boot"</span>,
+        <span class="str">"Python"</span>, <span class="str">"Flask"</span>,
+        <span class="str">"AI/ML"</span>, <span class="str">"RAG"</span>,
+        <span class="str">"FastAPI"</span>, <span class="str">"LLaMA 3"</span>,
+    ]
+
+    <span class="kw">def</span> <span class="fn">passion</span>(self):
+        <span class="kw">return</span> <span class="str">"Building intelligent</span>
+               <span class="str">scalable systems"</span></pre>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">01. Who am I</span>
+      <h2 class="section-title" data-value="About Me">About Me</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-avatar-wrap">
+        <div class="avatar-card glass">
+          <div class="avatar-inner">
+            <img src="profile.jpg" alt="Mantosh Singh" class="avatar-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="avatar-initials avatar-fallback">MS</div>
+          </div>
+          <div class="avatar-stats">
+            <div class="stat-item">
+              <span class="stat-num" data-target="4">0</span><span>+</span>
+              <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="6">0</span><span>+</span>
+              <span class="stat-label">Key Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="15">0</span><span>+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="about-lead">
+          I'm a <span class="highlight">Software Developer</span> at Virtuoso Netsoft Pvt. Ltd., where I've spent 4+ years designing and shipping production-grade systems across the full stack.
+        </p>
+        <p>
+          My work spans enterprise Java applications with Spring Boot, Python-powered Flask dashboards and CRM platforms, and now the cutting edge of AI engineering — building RAG chatbots with locally-hosted LLMs, semantic search, and vector databases.
+        </p>
+        <p>
+          I care deeply about system performance, security, and code quality. Whether it's optimising MySQL queries for 30,000-record paginated views, wiring Kafka and Redis for high-throughput messaging, or tuning cosine similarity thresholds for better LLM retrieval, I work at every layer of the stack.
+        </p>
+        <div class="about-tags">
+          <span class="tag">Enterprise Java</span>
+          <span class="tag">Python / Flask</span>
+          <span class="tag">AI/ML Engineering</span>
+          <span class="tag">RAG Systems</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">RBAC Design</span>
+          <span class="tag">Data Analytics</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">02. What I know</span>
+      <h2 class="section-title" data-value="Technical Skills">Technical Skills</h2>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-category glass">
+        <div class="skill-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9l3 3-3 3M13 15h3"/></svg>
+        </div>
+        <h3>Backend Development</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>Java / Spring Boot</span><div class="bar"><div class="bar-fill" data-pct="92"></div></div></div>
+          <div class="skill-bar-item"><span>Python / Flask</span><div class="bar"><div class="bar-fill" data-pct="90"></div></div></div>
+          <div class="skill-bar-item"><span>FastAPI</span><div class="bar"><div class="bar-fill" data-pct="80"></div></div></div>
+          <div class="skill-bar-item"><span>Servlets / JSP</span><div class="bar"><div class="bar-fill" data-pct="85"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skill-category glass">
+        <div class="skill-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4.03 3-9 3S3 13.66 3 12"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <h3>Databases & Storage</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>MySQL / Oracle</span><div class="bar"><div class="bar-fill" data-pct="90"></div></div></div>
+          <div class="skill-bar-item"><span>MongoDB</span><div class="bar"><div class="bar-fill" data-pct="78"></div></div></div>
+          <div class="skill-bar-item"><span>Redis</span><div class="bar"><div class="bar-fill" data-pct="82"></div></div></div>
+          <div class="skill-bar-item"><span>SQLite / SQLAlchemy</span><div class="bar"><div class="bar-fill" data-pct="85"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skill-category glass">
+        <div class="skill-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>AI / Machine Learning</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>RAG Architecture</span><div class="bar"><div class="bar-fill" data-pct="85"></div></div></div>
+          <div class="skill-bar-item"><span>LLM Integration (LLaMA 3)</span><div class="bar"><div class="bar-fill" data-pct="80"></div></div></div>
+          <div class="skill-bar-item"><span>ChromaDB / Embeddings</span><div class="bar"><div class="bar-fill" data-pct="82"></div></div></div>
+          <div class="skill-bar-item"><span>Semantic Search</span><div class="bar"><div class="bar-fill" data-pct="80"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skill-category glass">
+        <div class="skill-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Security & Auth</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>OAuth2 / JWT</span><div class="bar"><div class="bar-fill" data-pct="88"></div></div></div>
+          <div class="skill-bar-item"><span>RBAC Design</span><div class="bar"><div class="bar-fill" data-pct="90"></div></div></div>
+          <div class="skill-bar-item"><span>Spring Security</span><div class="bar"><div class="bar-fill" data-pct="85"></div></div></div>
+          <div class="skill-bar-item"><span>OTP / 2FA</span><div class="bar"><div class="bar-fill" data-pct="87"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skill-category glass">
+        <div class="skill-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Data & Analytics</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>Pandas DataFrames</span><div class="bar"><div class="bar-fill" data-pct="88"></div></div></div>
+          <div class="skill-bar-item"><span>Plotly Charts</span><div class="bar"><div class="bar-fill" data-pct="83"></div></div></div>
+          <div class="skill-bar-item"><span>CDR Processing</span><div class="bar"><div class="bar-fill" data-pct="85"></div></div></div>
+          <div class="skill-bar-item"><span>Analytics Dashboards</span><div class="bar"><div class="bar-fill" data-pct="87"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skill-category glass">
+        <div class="skill-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+        </div>
+        <h3>APIs & Messaging</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>RESTful APIs</span><div class="bar"><div class="bar-fill" data-pct="92"></div></div></div>
+          <div class="skill-bar-item"><span>Apache Kafka</span><div class="bar"><div class="bar-fill" data-pct="80"></div></div></div>
+          <div class="skill-bar-item"><span>Google Cloud Pub/Sub</span><div class="bar"><div class="bar-fill" data-pct="78"></div></div></div>
+          <div class="skill-bar-item"><span>SOAP / Webhooks</span><div class="bar"><div class="bar-fill" data-pct="85"></div></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tech-tags-section">
+      <h3 class="tech-tags-title">All Technologies</h3>
+      <div class="tech-cloud">
+        <span class="tech-pill tier1">Java</span>
+        <span class="tech-pill tier1">Spring Boot</span>
+        <span class="tech-pill tier1">Python</span>
+        <span class="tech-pill tier1">Flask</span>
+        <span class="tech-pill tier1">FastAPI</span>
+        <span class="tech-pill tier2">MySQL</span>
+        <span class="tech-pill tier2">MongoDB</span>
+        <span class="tech-pill tier2">Redis</span>
+        <span class="tech-pill tier2">Oracle</span>
+        <span class="tech-pill tier2">SQLite</span>
+        <span class="tech-pill tier3">RAG</span>
+        <span class="tech-pill tier3">ChromaDB</span>
+        <span class="tech-pill tier3">LLaMA 3</span>
+        <span class="tech-pill tier3">Ollama</span>
+        <span class="tech-pill tier3">Sentence Transformers</span>
+        <span class="tech-pill tier2">Apache Kafka</span>
+        <span class="tech-pill tier2">Google Pub/Sub</span>
+        <span class="tech-pill tier2">Apache POI</span>
+        <span class="tech-pill tier1">OAuth2 / JWT</span>
+        <span class="tech-pill tier1">RBAC</span>
+        <span class="tech-pill tier2">Pandas</span>
+        <span class="tech-pill tier2">Plotly</span>
+        <span class="tech-pill tier1">Git</span>
+        <span class="tech-pill tier2">Maven</span>
+        <span class="tech-pill tier2">Tomcat</span>
+        <span class="tech-pill tier1">HTML / CSS / JS</span>
+        <span class="tech-pill tier2">jQuery / AJAX</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">03. Work history</span>
+      <h2 class="section-title" data-value="Experience">Experience</h2>
+    </div>
+    <div class="timeline">
+      <!-- Scroll-Driven SVG Line -->
+      <svg class="timeline-svg">
+        <line x1="1" y1="0" x2="1" y2="100%" class="timeline-path" id="timelinePath"></line>
+      </svg>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">
+          <div class="marker-ring"></div>
+          <div class="marker-dot"></div>
+        </div>
+        <div class="timeline-card glass">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Software Developer</h3>
+              <span class="timeline-company">Virtuoso Netsoft Private Limited · Mohali, Punjab</span>
+            </div>
+            <span class="timeline-date">Nov 2020 – Present</span>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Developed and maintained Java-based enterprise web applications using Spring Boot, JSP, and Servlets</li>
+            <li>Built Python Flask web applications including MIS portals, analytics dashboards, billing reconciliation tools, and CRM platforms</li>
+            <li>Designed and implemented AI-powered chatbot using RAG architecture, vector databases, and locally-hosted LLMs</li>
+            <li>Performed bug fixing, code refactoring, and performance optimisation across production systems</li>
+            <li>Designed responsive UIs with HTML, CSS, JavaScript, AJAX, and jQuery</li>
+            <li>Built SOAP and RESTful web services for robust client-server communication</li>
+            <li>Wrote optimised SQL queries ensuring data integrity, validation, and efficient retrieval</li>
+            <li>Managed MySQL, MongoDB, Redis, and SQLite database environments</li>
+          </ul>
+          <div class="timeline-techs">
+            <span class="t-tag">Java</span>
+            <span class="t-tag">Spring Boot</span>
+            <span class="t-tag">Python</span>
+            <span class="t-tag">Flask</span>
+            <span class="t-tag">RAG</span>
+            <span class="t-tag">MySQL</span>
+            <span class="t-tag">MongoDB</span>
+            <span class="t-tag">Redis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="education-block">
+      <div class="section-subheader">Education</div>
+      <div class="edu-grid">
+        <div class="edu-card glass">
+          <div class="edu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div>
+            <h4>Bachelor of Technology – Computer Science</h4>
+            <span class="edu-inst">Northwest College, Moga</span>
+            <span class="edu-year">August 2019</span>
+          </div>
+        </div>
+        <div class="edu-card glass">
+          <div class="edu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          </div>
+          <div>
+            <h4>12th Standard – Science</h4>
+            <span class="edu-inst">Bhupindra Khalsa School, Moga</span>
+            <span class="edu-year">May 2015</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">04. What I've built</span>
+      <h2 class="section-title" data-value="Key Projects">Key Projects</h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card glass reveal is-loading">
+        <div class="project-num">01</div>
+        <div class="project-content">
+          <h3 class="project-title">RCS Messaging Platform</h3>
+          <p class="project-desc">Enterprise-grade platform for rich media business messaging, campaign management, and chatbot operations over Google RCS infrastructure. Supports bulk messaging, scheduling, analytics dashboards, and webhook-based delivery tracking.</p>
+          <ul class="project-highlights">
+            <li>Full-stack (JSP + Servlets) for complete bot lifecycle management</li>
+            <li>Google RCS API + Cloud Pub/Sub for scalable message delivery</li>
+            <li>Kafka message queuing + Redis caching for high throughput</li>
+            <li>RBAC security with OTP-based 2FA and audit logging</li>
+            <li>50 MB file uploads + Excel report generation via Apache POI</li>
+          </ul>
+          <div class="project-tags">
+            <span>Java 11</span><span>Tomcat 10</span><span>MySQL 8</span>
+            <span>Kafka</span><span>Redis</span><span>Google RCS API</span><span>Cloud Pub/Sub</span>
+          </div>
+        </div>
+        <div class="project-category cat-java">Java Enterprise</div>
+      </div>
+
+      <div class="project-card glass reveal is-loading">
+        <div class="project-num">02</div>
+        <div class="project-content">
+          <h3 class="project-title">Template Mapping Service</h3>
+          <p class="project-desc">Microservice providing a REST API for multi-carrier RCS template transformation across Google, Jio, and Vodafone networks. Multi-tenant architecture with OAuth2 JWT security.</p>
+          <ul class="project-highlights">
+            <li>Spring Boot REST API standardising template conversion across carriers</li>
+            <li>Rich message formats: cards, carousels, and interactive action buttons</li>
+            <li>Redis caching reducing template resolution latency</li>
+            <li>Webhook normalisation engine unifying delivery tracking</li>
+            <li>OAuth2 JWT via Spring Security; multi-tenant isolation per provider</li>
+          </ul>
+          <div class="project-tags">
+            <span>Java 21</span><span>Spring Boot 3</span><span>Spring Security</span>
+            <span>MySQL 8</span><span>Redis</span><span>OAuth2</span><span>Maven</span>
+          </div>
+        </div>
+        <div class="project-category cat-java">Java Microservice</div>
+      </div>
+
+      <div class="project-card glass reveal is-loading">
+        <div class="project-num">03</div>
+        <div class="project-content">
+          <h3 class="project-title">CDR MIS — SMS Analytics Portal</h3>
+          <p class="project-desc">Full-stack web application managing and analysing bulk SMS Call Detail Records (CDRs), enabling real-time delivery tracking across thousands of messages per day with SMPP/DLT 2FA.</p>
+          <ul class="project-highlights">
+            <li>2FA with OTP via sms24hours SMPP/DLT API, 5-minute expiry</li>
+            <li>RBAC: Admin full access vs. User restricted data views</li>
+            <li>Real-time analytics dashboard with dynamic monthly partitioned CDR tables</li>
+            <li>Paginated CDR search: up to 30,000 records/page with Pandas rendering</li>
+            <li>Filters by mobile number, Template ID, username, and date range</li>
+          </ul>
+          <div class="project-tags">
+            <span>Python</span><span>Flask</span><span>MySQL</span>
+            <span>Pandas</span><span>SQLite</span><span>SMPP/DLT</span>
+          </div>
+        </div>
+        <div class="project-category cat-python">Python / Flask</div>
+      </div>
+
+      <div class="project-card glass reveal is-loading">
+        <div class="project-num">04</div>
+        <div class="project-content">
+          <h3 class="project-title">RBM BSNL Billing Reconciliation</h3>
+          <p class="project-desc">Secure Flask web app to reconcile and analyse BSNL RBM billing events with interactive Plotly charts, drill-down analytics, and CSV export for business reporting.</p>
+          <ul class="project-highlights">
+            <li>Flask-Login + bcrypt + session management for secure access</li>
+            <li>SQLAlchemy ORM + Pandas for drill-down analytics by date/type/agent</li>
+            <li>Interactive Plotly charts: Pie, Bar, Line across MT/MO/SMS/WhatsApp/RCS</li>
+            <li>Filterable reporting table with CSV export for billing reconciliation</li>
+          </ul>
+          <div class="project-tags">
+            <span>Python</span><span>Flask</span><span>MySQL</span>
+            <span>Plotly</span><span>SQLAlchemy</span><span>Pandas</span>
+          </div>
+        </div>
+        <div class="project-category cat-python">Python / Analytics</div>
+      </div>
+
+      <div class="project-card glass reveal is-loading">
+        <div class="project-num">05</div>
+        <div class="project-content">
+          <h3 class="project-title">ZestDhan Admin CRM</h3>
+          <p class="project-desc">Multi-module Admin CRM for a fintech lending product managing loan application pipelines end-to-end with role-based data access, 5 relational data models, and superadmin gating.</p>
+          <ul class="project-highlights">
+            <li>RBAC: admins see full records, users see only aggregated daily counts</li>
+            <li>5 relational models: Loan Application, Profession, Financial, Personal, Referrals</li>
+            <li>Date-range filtering via SQLAlchemy func.date() and between()</li>
+            <li>Flask-Login + Werkzeug bcrypt + email-based superadmin gating</li>
+            <li>User management module for privileged admins to register users with roles</li>
+          </ul>
+          <div class="project-tags">
+            <span>Python</span><span>Flask</span><span>MySQL</span>
+            <span>Flask-SQLAlchemy</span><span>Flask-Login</span><span>Werkzeug</span>
+          </div>
+        </div>
+        <div class="project-category cat-python">Python / CRM</div>
+      </div>
+
+      <div class="project-card glass reveal featured-project is-loading">
+        <div class="project-num">06</div>
+        <div class="featured-badge">Featured AI Project</div>
+        <div class="project-content">
+          <h3 class="project-title">RAG-Based AI Chatbot</h3>
+          <p class="project-desc">Full-stack Retrieval-Augmented Generation chatbot enabling organisations to upload custom knowledge bases and interact via a locally-hosted LLM — zero cloud AI API dependencies, full data privacy.</p>
+          <ul class="project-highlights">
+            <li>Semantic search with ChromaDB + all-MiniLM-L6-v2 embeddings + overlapping chunk indexing</li>
+            <li>DuckDuckGo web fallback triggered when KB relevance drops below cosine distance threshold</li>
+            <li>Multi-tenant admin panel with RBAC (admin/user) and session management</li>
+            <li>Public REST API supporting SSE streaming + one-shot JSON response modes</li>
+            <li>100% local stack — data privacy + cost efficiency, no cloud AI services</li>
+          </ul>
+          <div class="project-tags">
+            <span>Python</span><span>FastAPI</span><span>Ollama</span>
+            <span>LLaMA 3</span><span>ChromaDB</span><span>Sentence Transformers</span><span>SSE</span>
+          </div>
+        </div>
+        <div class="project-category cat-ai">AI / ML</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">05. Let's talk</span>
+      <h2 class="section-title" data-value="Get In Touch">Get In Touch</h2>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <p class="contact-lead">
+          I'm currently open to new opportunities — whether it's a full-time role, a freelance project, or an interesting collaboration. Feel free to reach out!
+        </p>
+        <div class="contact-cards">
+          <a href="mailto:smantosh06@gmail.com" class="contact-card glass">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <span class="cc-label">Email</span>
+              <span class="cc-value">smantosh06@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:+917009073863" class="contact-card glass">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+            </div>
+            <div>
+              <span class="cc-label">Phone</span>
+              <span class="cc-value">+91 7009073863</span>
+            </div>
+          </a>
+          <div class="contact-card glass no-link">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <span class="cc-label">Location</span>
+              <span class="cc-value">Mohali, Punjab, India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form glass" id="contactForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="What's this about?" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <span class="btn-text">Send Message</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+        <div class="form-note" id="formNote"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg class="brand-logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px;">
+          <rect width="40" height="40" rx="12" fill="url(#logo-grad-f)" fill-opacity="0.1" stroke="url(#logo-grad-f)" stroke-width="1.5"/>
+          <polyline points="12,26 12,14 20,22 28,14 28,26" stroke="url(#logo-grad-f)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="logo-grad-f" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="var(--accent)"/>
+              <stop offset="1" stop-color="var(--accent2)"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Mantosh Singh</span>
+      </div>
+      <p class="footer-tagline">Building scalable systems &amp; intelligent applications.</p>
+      <p class="footer-copy">© 2024 Mantosh Singh. Crafted with care.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== AI CHATBOT DEMO ===== -->
+<button id="chatBubbleBtn" class="chat-toggle-btn hidden" aria-label="Open AI Chat">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</button>
+
+<div id="chatWindow" class="chat-window glass open">
+  <div class="chat-header">
+    <div class="chat-header-info">
+      <div class="chat-avatar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
+      </div>
+      <div>
+        <h4>M.Singh AI</h4>
+        <span>RAG Demo Model</span>
+      </div>
+    </div>
+    <button id="chatMinBtn" class="chat-close-btn" aria-label="Minimize Chat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <!-- Messages are injected automatically via JS -->
+  </div>
+</div>
+
+<div id="backToTop" class="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
